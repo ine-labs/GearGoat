@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2b4162;
+    background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+}
+
+
+.dashboard-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.dashboard {
+    position: relative;
+    width: 800px;
+    height: 260px;
+    margin: auto;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#speed {
+    font-size: 34px;
+    color: lightblue;
+    font-family: 'digital-clock-font';
+    position: absolute;
+    top: 42%;
+    left: 46%;
+}
+
+#current-speed {
+    font-weight: bold;
+    color: lightblue;
+}
+
+#turn-signal {
+    top: 38%;
+    left: 8.5%;
+}
+
+.left, .right {
+    background-color: #aaa;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.right {
+    background-color: #aaa;
+    position: absolute;
+    top: 44.7%;
+    left: 23.3%;
+}
+
+.left {
+    position: absolute;
+    background-color: #aaa;
+    top: 44.7%;
+    left: 8.6%;
+}
+
+#doors {
+    top: 44.7%;
+    left: 8.6%;
+}
+
+#door-1, #door-2, #door-3, #door-4 {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+#door-1 {
+    background-color: red;
+    position: absolute;
+    top: 44.7%;
+    right:27%;
+}
+#door-2 {
+    background-color: red;
+    position: absolute;
+    top: 44.7%;
+    right: 1%;
+}
+#door-3 {
+    background-color: red;
+    position: absolute;
+    top: 63%;
+    left: 70.5%;
+}
+#door-4 {
+    background-color: red;
+    position: absolute;
+    top: 63%;
+    left: 96.8%;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.button-grid button {
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
