@@ -1,4 +1,4 @@
-# GearGoat : A Car Vulnerabilities Simulator
+# GearGoat : Car Vulnerabilities Simulator
 
 ![](images/4.png)
 
@@ -98,10 +98,9 @@ docker kill $CONTAINER_ID
 ```
 
 ## Contributors
-Nishant Sharma, Director, Lab Platform, INE <nsharma@ine.com>
-
-Pranjal Soni, Software Engineer (Cloud), INE <psoni@ine.com>
-
+Pranjal Soni, Software Engineer (Cloud), INE <psoni@ine.com>    (Primary Contributor)
+ 
+Nishant Sharma, Director (Lab Platform), INE <nsharma@ine.com>  (Guidance)
 
 ## Contribution Guidelines
 
