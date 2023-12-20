@@ -1,7 +1,6 @@
 # GearGoat : Car Vulnerabilities Simulator
 
-![](images/4.png)
-
+![1](https://github.com/ine-labs/GearGoat/assets/109127914/35692bf3-c31c-4f29-826f-2c4520102641)
 
 A python implementation inspired from [ICSim](https://github.com/zombieCraig/ICSim). Currently supports running on a single interface "vcan0" and fixed arbitration IDs for the actions including, turn indicators, door lock unlock indicators and speedometer.
 
@@ -65,6 +64,11 @@ sudo docker run --network="host" --privileged geargoat
 ```
 http://localhost or http://<the_machine_ip>
 ```
+```sh
+ip_address=$(hostname -I | awk '{print $1}')
+url="http://$ip_address"
+echo $url
+```
 
 ## Usage
 There are mainly three car actions that can be performed with this web UI, which includes:
@@ -77,30 +81,38 @@ Try out each buttons and observe the actions in the UI.
 
 Clicking on indicator buttons switches the state for a fraction of second. The color changes to "orange". **Click for a slightly longer duration to register the signal change**.
 
-![](images/1.png)
+![2](https://github.com/ine-labs/GearGoat/assets/109127914/20cf5901-9cf6-481f-a709-7720c8240448)
 
 The door is initially locked indicated by "red". It can be unlocked by clicking the corresponding door unlock button which turns the indicator to "green". Clicking the corresponding door lock button again will revert it back to "red".
 
-![](images/2.png)
+![3](https://github.com/ine-labs/GearGoat/assets/109127914/8df83f50-15bb-4426-a3f6-078cbdc5a9d2)
 
 
 Finally the accelerate button, which will respond towards mouse clicks. Clicking and holding the button (mousedown) will result in speed increase and releasing the button(mouseup) results in speed falling down.
 
-![](images/3.png)
+![4](https://github.com/ine-labs/GearGoat/assets/109127914/535be506-3c07-440d-88d1-1b9ad24cb027)
 
 
 **All these actions generate corresponding CAN packets.**
 
-After usage, you can turn off the simulator by killing the docker container.
+After usage, you can turn off the simulator by:
 ```sh
-CONTAINER_ID=$(docker ps -qf "ancestor=geargoat")
-docker kill $CONTAINER_ID
+CONTAINER_ID=$(sudo docker ps -qf "ancestor=geargoat")
+sudo docker stop $CONTAINER_ID
 ```
+
+## Manuals
+
+The manuals are available in the [manuals](manuals/) directory.
+
+The videos associated with the manuals can be accessed at: <https://www.youtube.com/playlist?list=PLz6wD_rVyKMAHoVv4J0O0AlO00uSBinDv>
 
 ## Contributors
 Pranjal Soni, Software Engineer (Cloud), INE <psoni@ine.com>    (Primary Contributor)
  
 Nishant Sharma, Director (Lab Platform), INE <nsharma@ine.com>  (Guidance)
+
+Sanjeev Mahunta, Software Engineer (Cloud), INE <smahunta@ine.com>
 
 ## Contribution Guidelines
 
