@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <title>GearGoat</title>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard">
+            <div id="speed"><span id="current-speed">00.00</span></div>
+            <div id="turn-signal">
+                <div class="left" id="left-indicator"></div>
+                <div class="right" id="right-indicator"></div>
+            </div>
+
+            <div id="doors">
+                <div class="topleft" id="door-1"></div>
+                <div class="topright" id="door-2"></div>
+                <div class="backleft" id="door-3"></div>
+                <div class="backright" id="door-4"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="button-grid">
+        <button id="leftindicator">Left Indicator</button>
+        <button id="rightindicator">Right Indicator</button>
+
+        <button id="door1unlock">Door 1 Unlock</button>
+        <button id="door2unlock">Door 2 Unlock</button>
+        <button id="door3unlock">Door 3 Unlock</button>
+        <button id="door4unlock">Door 4 Unlock</button>
+
+        <button id="door1lock">Door 1 lock</button>
+        <button id="door2lock">Door 2 lock</button>
+        <button id="door3lock">Door 3 lock</button>
+        <button id="door4lock">Door 4 lock</button>
+
+        <button id="accelerate">Accelerate</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
